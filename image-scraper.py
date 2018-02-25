@@ -7,7 +7,7 @@ iterations = 1
 if len(sys.argv) == 2 and sys.argv[1] == "--all":
 	iterations = 10
 
-reddit = praw.Reddit(client_id="", client_secret="-c", password="", user_agent="image-scraper by /u/NIPE-SYSTEMS", username="")
+reddit = praw.Reddit(client_id="", client_secret="", password="", user_agent="image-scraper by /u/NIPE-SYSTEMS", username="")
 params = {}
 for i in range(iterations):
 	for post in reddit.subreddit("MostBeautiful").new(params=params):
