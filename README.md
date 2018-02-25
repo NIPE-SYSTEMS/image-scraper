@@ -65,3 +65,12 @@ Unit=image-scraper.service
 [Install]
 WantedBy=multi-user.target
 ```
+
+## How are posts filtered, decisions what to download
+
+The `image-scraper` filters posts so that only "good" images are downloaded. Here are the filtering rules:
+
+* Do not download if already downloaded.
+* Do not download if score is below `+100`.
+* Do not download if reddit does not provide a preview in the post (so no direct image linked).
+* Do not download if the resolution is below `1920x1080`.
